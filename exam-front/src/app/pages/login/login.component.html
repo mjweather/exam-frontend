@@ -5,13 +5,15 @@
                 <div class="container text-center">
                     <mat-card class="mt20">
                     <h1 style="margin-top:40px;">Login</h1>
-
-                    <form>
+                    <!-- {{loginData|json}} -->
+                    <form (ngSubmit)="formSubmit()">
                         <mat-form-field class="full-width text-center" appearance="outline">
-                        
+                            
                             <mat-label>Username</mat-label>
                             <input
-                            required
+                            [(ngModel)]="loginData.username"
+                            name="username"
+                            
                             name="userName"
                             matInput placeholder="Enter Username">
                             <mat-hint>Valid username</mat-hint>
@@ -21,7 +23,9 @@
                         
                             <mat-label>Password</mat-label>
                             <input 
-                            required
+                            [(ngModel)]="loginData.password"
+                            name="password"
+                           type="password"
                             name="password"
                             matInput placeholder="Enter Password">
                             

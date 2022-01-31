@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
   constructor(private userService:UserService,private _snackBar:MatSnackBar) { }
 
   public user={
-    userName:'',
+    username:'',
     password:'',
     firstName:'',
     lastName:'',
@@ -25,7 +25,7 @@ export class SignUpComponent implements OnInit {
   }
   formSubmit(){
     console.log(this.user)
-    if(this.user.userName==null ||this.user.userName==''){
+    if(this.user.username==null ||this.user.username==''){
       // alert("Please enter username")
       this._snackBar.open('Please enter username','',{
         duration: 2000
