@@ -23,7 +23,18 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatListModule} from '@angular/material/list';
-
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import {MatTableModule} from '@angular/material/table';
+import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { ViewQuizesComponent } from './pages/admin/view-quizes/view-quizes.component';
+import { AddQuizesComponent } from './pages/admin/add-quizes/add-quizes.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { ViewQuestionComponent } from './pages/admin/view-question/view-question.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
@@ -35,7 +46,15 @@ import {MatListModule} from '@angular/material/list';
     DashboardComponent,
     UserDashboardComponent,
     SidebarComponent,
-    ProfileComponent
+    ProfileComponent,
+    WelcomeComponent,
+    ViewCategoriesComponent,
+    AddCategoryComponent,
+    ViewQuizesComponent,
+    AddQuizesComponent,
+    UpdateQuizComponent,
+    ViewQuestionComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +70,10 @@ import {MatListModule} from '@angular/material/list';
     MatSnackBarModule,
     MatCardModule,
     MatListModule,
+    MatTableModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    CKEditorModule
     
   ],
   providers: [authInterceptorProviders],

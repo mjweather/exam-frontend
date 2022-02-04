@@ -24,7 +24,7 @@
 
   <a
   *ngIf="isLoggedIn"
-  [routerLink]="">{{login.getUser().username}}</a>
+  routerLink="/admin/profile">{{login.getUser().username}}</a>
  
   <button
   (click)="logout()"
